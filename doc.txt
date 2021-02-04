@@ -1,7 +1,10 @@
 在微服务架构中，需要几个基础的服务治理组件，包括服务注册与发现、服务消费、负载均衡、断路器、智能路由、配置管理等，
 由这几个基础组件相互协作，共同组建了一个简单的微服务系统
 Spring cloud 有两种服务调用方式，一种是 ribbon+restTemplate，另一种是 feign
-启动程序，多次访问 http://localhost:8765/hi?name=forezp, 浏览器交替显示
+先启动注册中心服务, 注册中心页面 http://localhost:8761
+然后启动两个hi实例, 再启动程序feign，多次访问 http://localhost:8765/hi?name=forezp, 浏览器交替显示
+hi forezp,i am from port:8762
+hi forezp,i am from port:8763
 
 Eureka 注册中心: 注册与发现服务
 
